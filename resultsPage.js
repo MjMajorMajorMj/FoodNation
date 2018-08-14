@@ -11,7 +11,7 @@ function initializeApp() {
   getFoodAndMedia(countryCode);
   // ajaxGoogleImageSearch(food); //searches google search API for food
   // getWikipediaDescription(food); // gets wiki description
-  YoutubeApi.youtubeServerCall(food); //gets related videos from youtube APi
+  // YoutubeApi.youtubeServerCall(food); //gets related videos from youtube APi
 
   renderCountryName(countryName); //display's country name
   renderLogoImage(countryLogoUrl); //displays country flag
@@ -29,8 +29,23 @@ function getFoodAndMedia(countryCode){
     success: function(response){
       foodObj = JSON.parse(response);
       console.log(foodObj);
-      const {countryName, name, description, image} = foodObj.data;
+      const {countryName, name, description, image, videoIds} = foodObj.data;
       renderDescriptionSection(name, description, image);
+      youtubeIDSearch(videoIds);
+    },
+  };
+  $.ajax( ajaxOptions )
+}
+
+function youtubeIDSearch(idArr){
+  let idStr = idArr.join();  
+  var ajaxOptions = {
+    url: `https://www.googleapis.com/youtube/v3/videos?id=${idStr}&key=AIzaSyAq7z-Gi9RbxC9wrUqxIpIkUFV6u76Qwhw&part=snippet`,
+    method: 'GET',
+    success: function(response){
+      const videosArr = response.items;
+      console.log(videosArr);
+      videosArr.forEach(renderVideo)
     },
   };
   $.ajax( ajaxOptions )
@@ -47,6 +62,49 @@ function renderDescriptionSection(foodName, description, image){
   $(".food-section").prepend(foodHeaderTag);
   $(".foodImageContainer").append(foodImgTag);
   $(".wikiDescription").text(description);
+}
+
+function renderVideo(video){
+  console.log('video', video);
+  const videoBody = $("<div>", {
+    class: `videoDiv video-${video.id}`,
+    on: {
+      click: () => {
+        openYoutubeModal(video.id);
+      }
+    }
+  });
+  const title = $("<p>", {
+    class: "videoImageTitle",
+    text: video.snippet.title
+  });
+  const videoImage = $("<img>", {
+    src: `${video.snippet.thumbnails.medium.url}`
+  });
+  videoBody.append(videoImage, title);
+
+  $(".youtubeVideos").append(videoBody);
+}
+
+function openYoutubeModal(videoClicked) {
+
+
+  let youtubeVideo = $("<iframe>", {
+    width: "100%",
+    height: "100%",
+    src: `http://www.youtube.com/embed/${videoClicked}`,
+    frameborder: "1"
+  });
+  $(".youtubeModal").append(youtubeVideo);
+
+  $(".modal").addClass("animated fadeIn");
+  $(".modal .youtubeModal").addClass("animated zoomIn");
+  $(".modal").removeClass("hide");
+}
+
+function closeYoutubeModal() {
+  $(".youtubeModal").html("");
+  $(".modal").addClass("hide");
 }
 
 function renderYelpResults(businesses) {
