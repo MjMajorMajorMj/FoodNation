@@ -36,6 +36,18 @@ function getFoodAndMedia(countryCode){
   $.ajax( ajaxOptions )
 }
 
+function youtubeIDSearch(idArr){
+  let idStr = idArr.join();  
+  var ajaxOptions = {
+    url: `https://www.googleapis.com/youtube/v3/videos?id=${idStr}&key=AIzaSyAq7z-Gi9RbxC9wrUqxIpIkUFV6u76Qwhw&part=snippet`,
+    method: 'GET',
+    success: function(response){
+      console.log(response);
+    },
+  };
+  $.ajax( ajaxOptions )
+}
+
 function renderDescriptionSection(foodName, description, image){
   console.log('render function', foodName, description, image);
   let headerHtml = makeheader(foodName);

@@ -15,6 +15,18 @@ class YoutubeApi {
   }
 }
 
+function youtubeIDSearch(idArr){
+  let idStr = idArr.join();  
+  var ajaxOptions = {
+    url: `https://www.googleapis.com/youtube/v3/videos?id=${idStr}&key=AIzaSyAq7z-Gi9RbxC9wrUqxIpIkUFV6u76Qwhw&part=snippet`,
+    method: 'GET',
+    success: function(response){
+      console.log(response);
+    },
+  };
+  $.ajax( ajaxOptions )
+}
+
 function foodVideos(videos) {
   for (let video in videos.data) {
     const videoBody = $("<div>", {
