@@ -1,6 +1,7 @@
 $(document).ready(initializeApp);
 let food;
 function initializeApp() {
+  $('.mapContainer').hide();
   //grab url params here
   const { search } = window.location; // gets current url
   const [, countryCode] = search.split("="); // splits url into array and gets the second index.
@@ -9,10 +10,6 @@ function initializeApp() {
   const countryLogoUrl = CountryApi.getCountryLogoUrl(countryCode);
   food = CountryApi.getFoodFromCountry(countryCode);
   getFoodAndMedia(countryCode);
-  // ajaxGoogleImageSearch(food); //searches google search API for food
-  // getWikipediaDescription(food); // gets wiki description
-  // YoutubeApi.youtubeServerCall(food); //gets related videos from youtube APi
-
   renderCountryName(countryName); //display's country name
   renderLogoImage(countryLogoUrl); //displays country flag
 
@@ -184,44 +181,6 @@ function returnToHomepage() {
   window.location.href = "index.html";
 }
 
-// function ajaxGoogleImageSearch(inputFoodStr) {
-//   const ajaxObject = {
-//     dataType: "json",
-//     data: {
-//       key: "AIzaSyDCZkB-dNOWPZKRKZ8qExgMivNbyyAUcPQ",
-//       q: `${inputFoodStr}+gourmet+meal`,
-//       num: 2,
-//       type: "image/jpeg",
-//       imgSize: "huge",
-//       cx: "010569814504410284789:dq0xetlzofa",
-//       safe: "high"
-//     },
-//     url: "https://www.googleapis.com/customsearch/v1",
-//     method: "GET",
-//     success: function(response) {
-//       let headerHtml = makeheader(inputFoodStr);
-//       let foodHeaderTag = $("<h1>").html(headerHtml);
-//       let foodImgTag = $("<img>").attr(
-//         "src",
-//         response.items["1"].pagemap.cse_image["0"].src
-//       );
-//       $(".food-section").prepend(foodHeaderTag);
-//       $(".foodImageContainer").append(foodImgTag);
-//     },
-//     error: function() {
-//       let headerHtml = makeheader(inputFoodStr);
-//       let foodHeaderTag = $("<h1>").html(headerHtml);
-//       let foodImgTag = $("<img>").attr(
-//         "src",
-//         images/moo_cow.jpg
-//       );
-//       $(".food-section").prepend(foodHeaderTag);
-//       $(".foodImageContainer").append(foodImgTag);
-//     }
-//   };
-//   $.ajax(ajaxObject);
-// }
-
 function makeheader(inputString) {
   let strArray = inputString.split(" "); //splits string into array
   let result = "";
@@ -235,46 +194,11 @@ function makeheader(inputString) {
   return result;
 }
 
-// function getWikipediaDescription(inputStr) {
-//   let pageTitle = null;
-//   let pageID = null;
-//   const urlSearchStr =
-//     "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" +
-//     inputStr +
-//     "&format=json&srprop=snippet";
-//   let descrSearchStr = null;
-
-//   $.ajax({
-//     url: urlSearchStr,
-//     dataType: "jsonp",
-
-//     success: function getPageTitle(data) {
-//       const paulsTitle = data.query.search[0].title;
-//       pageTitle = data.query.search[0].title;
-//       pageID = data.query.search[0].pageid;
-//       descrSearchStr =
-//         "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" +
-//         pageTitle;
-//       getDescription();
-//     }
-//   });
-
-//   function getDescription() {
-//     $.ajax({
-//       url: descrSearchStr,
-//       dataType: "jsonp",
-//       success: function(data) {
-//         var pageSummary = data.query.pages[pageID].extract;
-//         /*****Save pageSummary onto DOM element here*****/
-//         $(".wikiDescription").text(pageSummary);
-//         /*$('DOMelement').text(pageSummary) */
-//         /***** ^^Do it here^^ ******/
-//       }
-//     });
-//   }
-// }
-
 function sendLocationToYelp(){
+  const windowSize = $(window).width();
+  if (windowSize > 375) {
+    $('.mapContainer').show();
+  }
   let location = $("input.inputField")[0].value;
   $('.yelp-list').empty();
   //data.results[0].geometry.location

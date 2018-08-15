@@ -231,7 +231,8 @@ section.how-to .youtubeVideos {
   padding: 1rem;
 }
 
-.mapContainer{width: 100vw;
+.mapContainer{
+    width: 100vw;
     height: 30vw;
 }
 #map {

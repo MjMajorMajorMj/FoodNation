@@ -25,8 +25,8 @@ class Yelp {
 function YelpMap(response={lat:33.633985,lng:-117.733393},businesses=[{name:"Learning Fuze",coordinates:{latitude:33.633985,longitude:-117.733393}}]){
     let myLatLng = {lat:response.lat, lng:response.lng};
     const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: myLatLng
+        center: myLatLng,
+        zoom: 1
     });
     let bounds = new google.maps.LatLngBounds();
     let infowindow = new google.maps.InfoWindow(); 
