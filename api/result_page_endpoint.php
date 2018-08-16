@@ -48,5 +48,6 @@ function utf8ize($d) {
     }
     return $d;
 }
-$output = json_encode(utf8ize($output));
+// $output = json_encode(utf8ize($output));
+$output = json_encode($output);
 print($output);
