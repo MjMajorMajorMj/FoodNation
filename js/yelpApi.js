@@ -1,7 +1,4 @@
-const BASE_URL = "./backend/yelp_server.php";
-
-const YELP_KEY =
-  "Cd4enAsuP8-RJG72Vu-KcFGjRFkklvvzsNer3NMokc800e5Apv5KhDncyYi56ptObgLpyU5EMxJoq4HueQ_vOmDd5igDri7DMW-lP4VNHu8TZ3fWLGp3reHoqTcWW3Yx";
+const BASE_URL = "../server/backend/yelp_server.php";
 
 class Yelp {
   static getLocalBusinesses({ lat: latitude, lng: longitude }, term = "food") {
@@ -12,7 +9,6 @@ class Yelp {
         latitude,
         longitude,
         term,
-        access_token: YELP_KEY,
         sort_by: 'distance',
         limit: 3
       }
