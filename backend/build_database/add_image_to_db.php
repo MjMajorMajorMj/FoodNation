@@ -1,7 +1,7 @@
 <?php
 require_once('mysql_connect.php');
-
-$query = "SELECT `id`, `name` FROM `food` WHERE 1";
+//SAFETY ERROR ON NEXT LINE. THIS FILE CAN CHANGE THE WHOLE DATABASE. USE WITH CAUTION.
+$query = "SELECT `id`, `name` FROM `food` WHERE <NEED TO CHANGE TO 1 FOR THIS TO WORK>";
 $result = mysqli_query($conn,$query);
 
 if(empty($result)) {
@@ -16,7 +16,7 @@ if(empty($result)) {
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-
+//NEED TO ADD GOOGLE KEY
             CURLOPT_URL => "https://www.googleapis.com/customsearch/v1?q=$foodName&num=1&start=1&imgSize=medium&searchType=image&key=<GOOGLE KEY>&cx=010634853593082562284:zqld8lmpm7s",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",

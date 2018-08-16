@@ -1,8 +1,8 @@
 <?php
 //Pull food names from db
 require_once('mysql_connect.php');
-
-$query = "SELECT `id`, `name` FROM `food` WHERE 1";
+//SAFETY ERROR ON NEXT LINE. THIS FILE CAN CHANGE THE WHOLE DATABASE. USE WITH CAUTION.
+$query = "SELECT `id`, `name` FROM `food` WHERE <NEED TO CHANGE TO 1 FOR THIS TO WORK>";
 $result = mysqli_query($conn,$query);
 
 if(empty($result)) {
@@ -17,7 +17,7 @@ if(empty($result)) {
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://www.googleapis.com/youtube/v3/search?maxResults=3&part=snippet&q=$foodName&type=video&key=AIzaSyAq7z-Gi9RbxC9wrUqxIpIkUFV6u76Qwhw",
+            CURLOPT_URL => "https://www.googleapis.com/youtube/v3/search?maxResults=3&part=snippet&q=recipe%20$foodName&type=video&key=AIzaSyAq7z-Gi9RbxC9wrUqxIpIkUFV6u76Qwhw",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,

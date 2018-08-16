@@ -1,7 +1,7 @@
 <?php
 require_once('mysql_connect.php');
-
-$query = "SELECT `id`, `name` FROM `food` WHERE 1";
+//SAFETY ERROR ON NEXT LINE. THIS FILE CAN CHANGE THE WHOLE DATABASE. USE WITH CAUTION.
+$query = "SELECT `id`, `name` FROM `food` WHERE <CHANGE TO 1 FOR THIS TO WORK>";
 $result = mysqli_query($conn,$query);
 
 if(empty($result)) {
