@@ -1,5 +1,5 @@
 <?php
-require '../backend/build_database/mysql_connect.php';
+require '../server/backend/build_database/mysql_connect.php';
 
 $output = [
     'success' => false,

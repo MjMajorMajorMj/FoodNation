@@ -8,16 +8,17 @@ class CountryApi {
   }
 
   static getCountryNameFromCode(countryCode) {
-      return _countries.find((country) => {
-        return country.code === countryCode.toUpperCase();
-      }).name;
-  }
-  static getFoodFromCountry(countryCode){
     return _countries.find((country) => {
       return country.code === countryCode.toUpperCase();
-    }).food;  
-}}
-  const _countries=[
+    }).name;
+  }
+  static getFoodFromCountry(countryCode) {
+    return _countries.find((country) => {
+      return country.code === countryCode.toUpperCase();
+    }).food;
+  }
+}
+const _countries = [
   {
     "code": "AF",
     "name": "Afghanistan",
@@ -217,7 +218,7 @@ class CountryApi {
   {
     "code": "CX",
     "name": "Christmas Island",
-    "food":"papaya"
+    "food": "papaya"
   },
   {
     "code": "CO",
@@ -232,12 +233,12 @@ class CountryApi {
   {
     "code": "CG",
     "name": "Congo",
-    "food":"pondu"
+    "food": "pondu"
   },
   {
     "code": "CD",
     "name": "Congo, Democratic Republic",
-    "food":"Moambe Chicken"
+    "food": "Moambe Chicken"
   },
   {
     "code": "CK",
@@ -252,7 +253,7 @@ class CountryApi {
   {
     "code": "CI",
     "name": "Cote D'Ivoire",
-    "food":"Aloko"
+    "food": "Aloko"
   },
   {
     "code": "HR",
@@ -332,12 +333,12 @@ class CountryApi {
   {
     "code": "FK",
     "name": "Falkland Islands",
-    "food":"fried fish"
+    "food": "fried fish"
   },
   {
     "code": "FO",
     "name": "Faroe Islands",
-    "food":"Lamb and mutton"
+    "food": "Lamb and mutton"
   },
   {
     "code": "FJ",
@@ -743,7 +744,7 @@ class CountryApi {
   {
     "code": "RU",
     "name": "Russia",
-    "food":"Beef Stroganoff",
+    "food": "Beef Stroganoff",
   },
   {
     "code": "RW",

@@ -16,40 +16,37 @@ function initializeApp() {
   addEventHandlers();
 }
 
-function getFoodAndMedia(countryCode){
+function getFoodAndMedia(countryCode) {
   var ajaxOptions = {
     url: 'api/result_page_endpoint.php',
     method: 'GET',
-    data:{
-      'countryCode': countryCode,             
+    data: {
+      'countryCode': countryCode,
     },
-    success: function(response){
+    success: function (response) {
       foodObj = JSON.parse(response);
-      console.log(foodObj);
-      const {countryName, name, description, image, videoIds} = foodObj.data;
+      const { countryName, name, description, image, videoIds } = foodObj.data;
       renderDescriptionSection(name, description, image);
       youtubeIDSearch(videoIds);
     },
   };
-  $.ajax( ajaxOptions )
+  $.ajax(ajaxOptions)
 }
 
-function youtubeIDSearch(idArr){
-  let idStr = idArr.join();  
+function youtubeIDSearch(idArr) {
+  let idStr = idArr.join();
   var ajaxOptions = {
     url: `https://www.googleapis.com/youtube/v3/videos?id=${idStr}&key=AIzaSyAq7z-Gi9RbxC9wrUqxIpIkUFV6u76Qwhw&part=snippet`,
     method: 'GET',
-    success: function(response){
+    success: function (response) {
       const videosArr = response.items;
-      console.log(videosArr);
       videosArr.forEach(renderVideo)
     },
   };
-  $.ajax( ajaxOptions )
+  $.ajax(ajaxOptions)
 }
 
-function renderDescriptionSection(foodName, description, image){
-  console.log('render function', foodName, description, image);
+function renderDescriptionSection(foodName, description, image) {
   let headerHtml = makeheader(foodName);
   let foodHeaderTag = $("<h1>").html(headerHtml);
   let foodImgTag = $("<img>").attr(
@@ -61,8 +58,7 @@ function renderDescriptionSection(foodName, description, image){
   $(".wikiDescription").text(description);
 }
 
-function renderVideo(video){
-  console.log('video', video);
+function renderVideo(video) {
   const videoBody = $("<div>", {
     class: `videoDiv video-${video.id}`,
     on: {
@@ -160,8 +156,8 @@ function addEventHandlers() {
   $(".brand").on("click", returnToHomepage);
   $(".modal").on("click", closeYoutubeModal); //closes fixed youtube modal
   document.querySelector(".flag img").addEventListener("error", addDummyFlag);
-  $(".search-icon").on("click", sendLocationToYelp );
-  $("input.inputField").on("keydown", handleInputBarEnterKey );
+  $(".search-icon").on("click", sendLocationToYelp);
+  $("input.inputField").on("keydown", handleInputBarEnterKey);
   $(window).scroll(hideBlinkScrollBar);
 }
 
@@ -194,7 +190,7 @@ function makeheader(inputString) {
   return result;
 }
 
-function sendLocationToYelp(){
+function sendLocationToYelp() {
   const windowSize = $(window).width();
   if (windowSize > 375) {
     $('.mapContainer').show();
@@ -213,13 +209,13 @@ function sendLocationToYelp(){
   return;
 }
 
-function handleInputBarEnterKey(event){
-      if(event.keyCode === 13){ //enter keypressed redirect the browser to page indicated with country code.
-          sendLocationToYelp();
-      }
-      return;
+function handleInputBarEnterKey(event) {
+  if (event.keyCode === 13) { //enter keypressed redirect the browser to page indicated with country code.
+    sendLocationToYelp();
+  }
+  return;
 }
 
-function hideBlinkScrollBar () {
+function hideBlinkScrollBar() {
   $('.blinkScrollBar').css('display', 'none');
 }
