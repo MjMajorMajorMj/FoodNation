@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 require '../server/backend/build_database/mysql_connect.php';
 
 $output = [
@@ -37,17 +38,5 @@ $output['data'] = [
         ]
 ];
 $output['success'] = true;
-
-function utf8ize($d) {
-    if (is_array($d)) {
-        foreach ($d as $k => $v) {
-            $d[$k] = utf8ize($v);
-        }
-    } else if (is_string ($d)) {
-        return utf8_encode($d);
-    }
-    return $d;
-}
-// $output = json_encode(utf8ize($output));
-$output = json_encode($output);
-print($output);
+$outputJSON = json_encode($output);
+print_r($outputJSON);
