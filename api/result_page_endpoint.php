@@ -38,5 +38,15 @@ $output['data'] = [
 ];
 $output['success'] = true;
 
-$output = json_encode($output);
+function utf8ize($d) {
+    if (is_array($d)) {
+        foreach ($d as $k => $v) {
+            $d[$k] = utf8ize($v);
+        }
+    } else if (is_string ($d)) {
+        return utf8_encode($d);
+    }
+    return $d;
+}
+$output = json_encode(utf8ize($output));
 print($output);
