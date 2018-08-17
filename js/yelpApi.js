@@ -11,6 +11,9 @@ class Yelp {
         term,
         sort_by: 'distance',
         limit: 3
+      },
+      success: function() {
+        window.scrollTo(0,document.body.scrollHeight);
       }
     };
 
