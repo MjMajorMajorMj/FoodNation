@@ -156,6 +156,11 @@ function renderYelpResults(businesses) {
     $details.append($reviewTitle, $rating, $categories, $address);
     $yelpReviewCard.append($reviewImg, $details).appendTo(".yelp-list");
   });
+  if (businesses.businesses.length === 1) {
+    $('.yelp-review-card').css('width', '50%');
+  } else {
+    $('.yelp-review-card').css('width', '30%');
+  }
 }
 
 function addEventHandlers() {
@@ -210,7 +215,7 @@ function sendLocationToYelp() {
   $("input.inputField").off();
   $('.yelp-list').empty();
   Geolocation.cityLocation(location).done(({ results: [first] }) => {
-    if (typeof(first) === "undefined") {
+    if (typeof (first) === "undefined") {
       $(".search-icon").on("click", sendLocationToYelp);
       $("input.inputField").on("keydown", handleInputBarEnterKey);
       return;
