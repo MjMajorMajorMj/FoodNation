@@ -8,7 +8,6 @@ function initializeApp() {
 
   const countryName = CountryApi.getCountryNameFromCode(countryCode);
   const countryLogoUrl = CountryApi.getCountryLogoUrl(countryCode);
-  food = CountryApi.getFoodFromCountry(countryCode);
   getFoodAndMedia(countryCode);
   renderCountryName(countryName); //display's country name
   renderLogoImage(countryLogoUrl); //displays country flag
@@ -26,6 +25,7 @@ function getFoodAndMedia(countryCode) {
     success: function (response) {
       foodObj = JSON.parse(response);
       const { countryName, name, description, image, videoIds } = foodObj.data;
+      food = name;
       renderDescriptionSection(name, description, image);
       youtubeIDSearch(videoIds);
     },
@@ -126,7 +126,10 @@ function renderYelpResults(businesses) {
       style: `background-image: url('${image_url}')`
     });
 
-    const $reviewTitle = $("<h1>").text(name);
+    const $reviewTitle = $("<h1>", {
+      text: name,
+      style: "overflow-wrap: break-word"
+    });
 
     const $rating = $("<div>", { class: "rating" }).rate({
       step_size: 0.1,
@@ -136,12 +139,14 @@ function renderYelpResults(businesses) {
 
     const $categories = $("<p>", {
       class: "categories",
+      style: "overflow-wrap: break-word",
       text: categories.reduce((accumulator, next) => {
         return accumulator + next.title + " ";
       }, "")
     });
     const $address = $("<p>", {
       class: "address",
+      style: "overflow-wrap: break-word",
       text: `${location.city}`
     });
 

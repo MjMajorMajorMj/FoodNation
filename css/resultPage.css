@@ -63,15 +63,16 @@ header .country h2.name {
   margin: auto 1rem;
 }
 
-section.food-section {
+/*section.food-section {
   min-height: calc(100vh - 2rem);
-}
+} */
 
 section.food-section h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: lighter;
-  margin-left: 15px;
+  text-align:center;
+  margin-left:0;
 }
 
 section.food-section h1 span {
@@ -294,6 +295,12 @@ section.yelp .search-container .autoCompleteBackground {
   width: 90%;
 }
 
+@media screen and (max-width: 700px) {
+  h1.brand{
+    font-size:2rem;
+  }
+}
+
 @media screen and (max-width: 375px) {
   header{
     padding: 1rem 0;
@@ -308,11 +315,6 @@ section.yelp .search-container .autoCompleteBackground {
 
   .mapContainer {
     display:none;
-  }
-
-  section.food-section h1 {
-    text-align:center;
-    margin-left:0;
   }
 
   .wikiDescription {
