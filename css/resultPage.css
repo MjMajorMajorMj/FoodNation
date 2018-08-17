@@ -8,6 +8,8 @@ Name: Pastel Red
 Hex: #FF655B */
 body {
   margin: 0;
+ overflow-x: hidden;
+
 }
 
 body,
@@ -38,6 +40,10 @@ h1.brand span {
   margin-right: -0.5rem;
 }
 
+#mobileBrand {
+  display:none;
+}
+
 header {
   width: 100%;
   height: 2rem;
@@ -61,15 +67,12 @@ header .country h2.name {
   margin: auto 1rem;
 }
 
-section.food-section {
-  min-height: calc(100vh - 2rem);
-}
-
 section.food-section h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: lighter;
-  margin-left: 15px;
+  text-align:center;
+  margin-left:0;
 }
 
 section.food-section h1 span {
@@ -109,19 +112,12 @@ section.food-section h1 span {
   animation-duration: 2900ms;
   animation-iteration-count: infinite;
   transition-timing-function: ease;
-  transition: 500ms;
 }
 
 @keyframes blink {
   0% {opacity: 0;}
   50% {opacity: .2;}
   100% {opacity: 0}
-}
-
-.hideBlinkScrollBar {
-  height: 0;
-  font-size: 0;
-  top: 120vh;
 }
 
 .modal {
@@ -145,6 +141,7 @@ section.how-to {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  clear: both;
 }
 
 section.how-to h1 {
@@ -186,13 +183,15 @@ section.how-to .youtubeVideos {
   color: black;
   width: 100%;
   font-weight: 2rem;
+  text-align:center;
+  overflow-wrap:break-word;
 }
 
 .hide {
   display: none;
 }
 
-.brand:hover {
+.brand:hover, .search-icon:hover {
   cursor: pointer;
 }
 
@@ -235,7 +234,8 @@ section.how-to .youtubeVideos {
   padding: 1rem;
 }
 
-.mapContainer{width: 100vw;
+.mapContainer{
+    width: 100vw;
     height: 30vw;
 }
 #map {
@@ -297,15 +297,85 @@ section.yelp .search-container .autoCompleteBackground {
   width: 90%;
 }
 
+.loading {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #fd297b;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 700px) {
+  h1.brand{
+    font-size:2rem;
+  }
+  header .country h2.name{
+    display:none;
+  }
+}
+
 @media screen and (max-width: 375px) {
   header{
     padding: 1rem 0;
   }
   h1.brand{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   header .country h2.name{
     display:none;
+  }
+
+  .mapContainer {
+    display:none;
+  }
+
+  .wikiDescription {
+    width: 100%;
+    float:none;
+    text-align:center;
+  }
+  .foodImageContainer{
+    display:static;
+  }
+
+  .foodImageContainer>img{
+    display:block;
+    margin: 0 auto;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+  }
+  
+  section.how-to h1{
+    text-align:center;
+  }
+
+  .videoDiv {
+    width: 100%;
+  }
+
+  .youtubeModal {
+    margin: 0 18px;
+    width:90%;
+    left:0;
+  }
+
+  .yelp-review-card {
+    width:100%;
+  }
+
+  #desktopBrand {
+    display:none;
+  }
+  #mobileBrand {
+    display:block;
   }
 }

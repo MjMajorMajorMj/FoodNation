@@ -1,24 +1,4 @@
-class CountryApi {
-  static getAllCountries() {
-    return _countries;
-  }
-
-  static getCountryLogoUrl(countryCode) {
-    return `http://www.countryflags.io/${countryCode}/flat/64.png`;
-  }
-
-  static getCountryNameFromCode(countryCode) {
-      return _countries.find((country) => {
-        return country.code === countryCode.toUpperCase();
-      }).name;
-  }
-  static getFoodFromCountry(countryCode){
-    return _countries.find((country) => {
-      return country.code === countryCode.toUpperCase();
-    }).food;  
-}}
-  const _countries=[
-  {
+const countryObj = [{
     "code": "AF",
     "name": "Afghanistan",
     "food": "Kabuli Palaw"
@@ -500,6 +480,11 @@ class CountryApi {
     "food": "Palusami"
   },
   {
+    "code": "KR",
+    "name": "Korea",
+    "food": "bibimbap"
+  },
+  {
     "code": "KW",
     "name": "Kuwait",
     "food": "Machboos"
@@ -943,6 +928,11 @@ class CountryApi {
     "food": "PABELLON CRIOLLO"
   },
   {
+    "code": "VN",
+    "name": "Viet Nam",
+    "food": "Pho"
+  },
+  {
     "code": "YE",
     "name": "Yemen",
     "food": "Kabsa"
@@ -958,3 +948,16 @@ class CountryApi {
     "food": "Sadza"
   }
 ];
+
+let jsonString = JSON.stringify(countryObj);
+
+function sendCountryToBackend () {
+var ajaxOptions = {
+    url: 'upload_countries_to_database.php',
+    method: 'POST',
+    data: jsonString,
+    success: (response)=>{console.log(response)},
+    dataType: 'json',
+};
+$.ajax( ajaxOptions )
+}

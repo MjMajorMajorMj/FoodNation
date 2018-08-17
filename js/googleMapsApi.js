@@ -1,12 +1,12 @@
-$(document).ready(function() {
-      var ResizeTimer;
-      $(window).on("resize", function(){
-          clearTimeout(ResizeTimer);
-          ResizeTimer = setTimeout(drawRegionsMap,200); 
-      });
-      $(window).trigger('resize');
-      countrySeparateArray();
-      $('.inputField').on('keyup', mobileMap);
+$(document).ready(function () {
+  var ResizeTimer;
+  $(window).on("resize", function () {
+    clearTimeout(ResizeTimer);
+    ResizeTimer = setTimeout(drawRegionsMap, 200);
+  });
+  $(window).trigger('resize');
+  countrySeparateArray();
+  $('.inputField').on('keyup', mobileMap);
 })
 
 var globalArray = [];
@@ -23,34 +23,34 @@ var options = {
 
 function mobileMap() {
   if ($(window).width() <= 375) {
-      let fullCountryName = $('input').val();
-      for (let countrySort = 0; countrySort < globalArray.length; countrySort++) {
-        if (fullCountryName === globalArray[countrySort][1]) {
-          globalArray[countrySort][2] = 0;
-          options.region = globalArray[countrySort][0];
-          options.height = $(window).height() * 0.3;
-          drawRegionsMap();
-          $('#regions_div').css('display', 'flex');
-        } else {
-          globalArray[countrySort][2] = 20;
-        }
+    let fullCountryName = $('input').val();
+    for (let countrySort = 0; countrySort < globalArray.length; countrySort++) {
+      if (fullCountryName === globalArray[countrySort][1]) {
+        globalArray[countrySort][2] = 0;
+        options.region = globalArray[countrySort][0];
+        options.height = $(window).height() * 0.3;
+        drawRegionsMap();
+        $('#regions_div').css('display', 'flex');
+      } else {
+        globalArray[countrySort][2] = 20;
       }
     }
+  }
 }
 
 function countrySeparateArray() {
-    const singleCountryArray = CountryApi.getAllCountries();
-    for (let countryCount = 0; countryCount<singleCountryArray.length; countryCount++) {
-        const countryCountArray = [];
-        const randomValue = Math.floor((Math.random() * 20));
-        countryCountArray.push(singleCountryArray[countryCount].code, singleCountryArray[countryCount].name, randomValue, singleCountryArray[countryCount].food);
-        globalArray.push(countryCountArray);
-    }
+  const singleCountryArray = CountryApi.getAllCountries();
+  for (let countryCount = 0; countryCount < singleCountryArray.length; countryCount++) {
+    const countryCountArray = [];
+    const randomValue = Math.floor((Math.random() * 20));
+    countryCountArray.push(singleCountryArray[countryCount].code, singleCountryArray[countryCount].name, randomValue, singleCountryArray[countryCount].food);
+    globalArray.push(countryCountArray);
+  }
 }
 
 google.charts.load('current', {
-    'packages':['geochart'],
-    'mapsApiKey': 'AIzaSyBcB4StL9IQqNuDsMzO7j_uvPvQXnVhn8U'
+  'packages': ['geochart'],
+  'mapsApiKey': 'AIzaSyBcB4StL9IQqNuDsMzO7j_uvPvQXnVhn8U'
 });
 
 google.charts.setOnLoadCallback(drawRegionsMap);
