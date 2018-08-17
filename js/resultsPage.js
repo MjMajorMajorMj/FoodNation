@@ -196,14 +196,21 @@ function sendLocationToYelp() {
     $('.mapContainer').show();
   }
   let location = $("input.inputField")[0].value;
+  //Remove click handlers for Yelp search
+  $(".search-icon").off();
+  $("input.inputField").off();
+
   $('.yelp-list').empty();
-  //data.results[0].geometry.location
   Geolocation.cityLocation(location).done(({ results: [first] }) => {
     const { location } = first.geometry;
     Yelp.getLocalBusinesses(location, food).done((businesses) => {
       businesses = JSON.parse(businesses);
       YelpMap(location, businesses.businesses);
       renderYelpResults(businesses);
+
+      //Reapply click handlers for Yelp Search
+      $(".search-icon").on("click", sendLocationToYelp);
+      $("input.inputField").on("keydown", handleInputBarEnterKey);
     });
   });
   return;
