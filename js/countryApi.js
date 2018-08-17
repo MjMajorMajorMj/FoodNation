@@ -22,31 +22,32 @@ const _countries = [
   {
     "code": "AF",
     "name": "Afghanistan",
-    "food": "Kabuli Palaw"
+    "food": "Click Here"
   },
   {
     "code": "AL",
     "name": "Albania",
-    "food": "kosi"
+    "food": "Click Here"
   },
   {
     "code": "DZ",
     "name": "Algeria",
-    "food": "Couscous"
+    "food": "Click Here"
   },
   {
     "code": "AS",
-    "name": "American Samoa"
+    "name": "American Samoa",
+    "food": "Click Here"
   },
   {
     "code": "AD",
     "name": "Andorra",
-    "food": "Escudella"
+    "food": "Click Here"
   },
   {
     "code": "AO",
     "name": "Angola",
-    "food": "Moamba de galinha"
+    "food": "Click Here"
   },
   {
     "code": "AI",
@@ -63,909 +64,909 @@ const _countries = [
   {
     "code": "AR",
     "name": "Argentina",
-    "food": "Empanada"
+    "food": "Click Here"
   },
   {
     "code": "AM",
     "name": "Armenia",
-    "food": "Khash"
+    "food": "Click Here"
   },
   {
     "code": "AW",
     "name": "Aruba",
-    "food": "Keshi yena"
+    "food": "Click Here"
   },
   {
     "code": "AU",
     "name": "Australia",
-    "food": "Pavlova"
+    "food": "Click Here"
   },
   {
     "code": "AT",
     "name": "Austria",
-    "food": "Wiener Schnitzel"
+    "food": "Click Here"
   },
   {
     "code": "AZ",
     "name": "Azerbaijan",
-    "food": " Dolma"
+    "food": "Click Here"
   },
   {
     "code": "BS",
     "name": "Bahamas",
-    "food": "Crack conch with peas and rice"
+    "food": "Click Here"
   },
   {
     "code": "BH",
     "name": "Bahrain",
-    "food": "Machboos"
+    "food": "Click Here"
   },
   {
     "code": "BD",
     "name": "Bangladesh",
-    "food": "Rice and Ilish"
+    "food": "Click Here"
   },
   {
     "code": "BB",
     "name": "Barbados",
-    "food": "Cou-Cou and Flying Fish"
+    "food": "Click Here"
   },
   {
     "code": "BY",
     "name": "Belarus",
-    "food": "Draniki"
+    "food": "Click Here"
   },
   {
     "code": "BE",
     "name": "Belgium",
-    "food": "Belgian waffle"
+    "food": "Click Here"
   },
   {
     "code": "BZ",
     "name": "Belize",
-    "food": "Fry jack"
+    "food": "Click Here"
   },
   {
     "code": "BJ",
     "name": "Benin",
-    "food": "Kuli Kuli"
+    "food": "Click Here"
   },
   {
     "code": "BM",
     "name": "Bermuda",
-    "food": "Bermuda fish chowder"
+    "food": "Click Here"
   },
   {
     "code": "BT",
     "name": "Bhutan",
-    "food": "Ema datshi"
+    "food": "Click Here"
   },
   {
     "code": "BO",
     "name": "Bolivia",
-    "food": "papa rellena"
+    "food": "Click Here"
   },
   {
     "code": "BW",
     "name": "Botswana",
-    "food": "Seswaa"
+    "food": "Click Here"
   },
   {
     "code": "BR",
     "name": "Brazil",
-    "food": "Feijoada"
+    "food": "Click Here"
   },
   {
     "code": "BG",
     "name": "Bulgaria",
-    "food": "Banitsa"
+    "food": "Click Here"
   },
   {
     "code": "BF",
     "name": "Burkina Faso",
-    "food": "Riz Gras"
+    "food": "Click Here"
   },
   {
     "code": "BI",
     "name": "Burundi",
-    "food": "Elephant soup"
+    "food": "Click Here"
   },
   {
     "code": "KH",
     "name": "Cambodia",
-    "food": "Amok trey"
+    "food": "Click Here"
   },
   {
     "code": "CM",
     "name": "Cameroon",
-    "food": "sweet potato"
+    "food": "Click Here"
   },
   {
     "code": "CA",
     "name": "Canada",
-    "food": "Nanaimo bar"
+    "food": "Click Here"
   },
   {
     "code": "CV",
     "name": "Cape Verde",
-    "food": "Cachupa"
+    "food": "Click Here"
   },
   {
     "code": "KY",
     "name": "Cayman Islands",
-    "food": "Conch Stew"
+    "food": "Click Here"
   },
   {
     "code": "CF",
     "name": "Central African Republic",
-    "food": "Cassava fufu"
+    "food": "Click Here"
   },
   {
     "code": "TD",
     "name": "Chad",
-    "food": "Boule"
+    "food": "Click Here"
   },
   {
     "code": "CL",
     "name": "Chile",
-    "food": "Empanada"
+    "food": "Click Here"
   },
   {
     "code": "CN",
     "name": "China",
-    "food": "dumplings"
+    "food": "Click Here"
   },
   {
     "code": "CX",
     "name": "Christmas Island",
-    "food": "papaya"
+    "food": "Click Here"
   },
   {
     "code": "CO",
     "name": "Colombia",
-    "food": "Sancocho"
+    "food": "Click Here"
   },
   {
     "code": "KM",
     "name": "Comoros",
-    "food": "Langouste a la Vanille"
+    "food": "Click Here"
   },
   {
     "code": "CG",
     "name": "Congo",
-    "food": "pondu"
+    "food": "Click Here"
   },
   {
     "code": "CD",
     "name": "Congo, Democratic Republic",
-    "food": "Moambe Chicken"
+    "food": "Click Here"
   },
   {
     "code": "CK",
     "name": "Cook Islands",
-    "food": "Rori"
+    "food": "Click Here"
   },
   {
     "code": "CR",
     "name": "Costa Rica",
-    "food": "Gallo pinto"
+    "food": "Click Here"
   },
   {
     "code": "CI",
     "name": "Cote D'Ivoire",
-    "food": "Aloko"
+    "food": "Click Here"
   },
   {
     "code": "HR",
     "name": "Croatia",
-    "food": "Istrian stew"
+    "food": "Click Here"
   },
   {
     "code": "CU",
     "name": "Cuba",
-    "food": "Ropa vieja"
+    "food": "Click Here"
   },
   {
     "code": "CY",
     "name": "Cyprus",
-    "food": "Souvla"
+    "food": "Click Here"
   },
   {
     "code": "CZ",
     "name": "Czech Republic",
-    "food": "roast pork"
+    "food": "Click Here"
   },
   {
     "code": "DK",
     "name": "Denmark",
-    "food": "fried pork"
+    "food": "Click Here"
   },
   {
     "code": "DJ",
     "name": "Djibouti",
-    "food": "Skoudehkaris"
+    "food": "Click Here"
   },
   {
     "code": "DM",
     "name": "Dominica",
-    "food": "Fish broth"
+    "food": "Click Here"
   },
   {
     "code": "DO",
     "name": "Dominican Republic",
-    "food": "Sancocho"
+    "food": "Click Here"
   },
   {
     "code": "EC",
     "name": "Ecuador",
-    "food": "Ceviche"
+    "food": "Click Here"
   },
   {
     "code": "EG",
     "name": "Egypt",
-    "food": "falafel"
+    "food": "Click Here"
   },
   {
     "code": "SV",
     "name": "El Salvador",
-    "food": "Pupusa"
+    "food": "Click Here"
   },
   {
     "code": "GQ",
     "name": "Equatorial Guinea",
-    "food": "Succotash"
+    "food": "Click Here"
   },
   {
     "code": "ER",
     "name": "Eritrea",
-    "food": "Zigini with injera,"
+    "food": "Click Here"
   },
   {
     "code": "EE",
     "name": "Estonia",
-    "food": "sauerkraut stew"
+    "food": "Click Here"
   },
   {
     "code": "ET",
     "name": "Ethiopia",
-    "food": "Kitfo"
+    "food": "Click Here"
   },
   {
     "code": "FK",
     "name": "Falkland Islands",
-    "food": "fried fish"
+    "food": "Click Here"
   },
   {
     "code": "FO",
     "name": "Faroe Islands",
-    "food": "Lamb and mutton"
+    "food": "Click Here"
   },
   {
     "code": "FJ",
     "name": "Fiji",
-    "food": "Kokoda"
+    "food": "Click Here"
   },
   {
     "code": "FI",
     "name": "Finland",
-    "food": "Karjalanpaisti"
+    "food": "Click Here"
   },
   {
     "code": "FR",
     "name": "France",
-    "food": "macarons"
+    "food": "Click Here"
   },
   {
     "code": "GA",
     "name": "Gabon",
-    "food": "Poulet Nyembwe"
+    "food": "Click Here"
   },
   {
     "code": "GM",
     "name": "Gambia",
-    "food": "Benachin"
+    "food": "Click Here"
   },
   {
     "code": "GE",
     "name": "Georgia",
-    "food": "Khachapuri"
+    "food": "Click Here"
   },
   {
     "code": "DE",
     "name": "Germany",
-    "food": "Sauerbraten"
+    "food": "Click Here"
   },
   {
     "code": "GH",
     "name": "Ghana",
-    "food": "Fufu"
+    "food": "Click Here"
   },
   {
     "code": "GI",
     "name": "Gibraltar",
-    "food": "Profiteroles"
+    "food": "Click Here"
   },
   {
     "code": "GR",
     "name": "Greece",
-    "food": "moussaka"
+    "food": "Click Here"
   },
   {
     "code": "GL",
     "name": "Greenland",
-    "food": "Kiviak"
+    "food": "Click Here"
   },
   {
     "code": "GD",
     "name": "Grenada",
-    "food": "Oil Down"
+    "food": "Click Here"
   },
   {
     "code": "GT",
     "name": "Guatemala",
-    "food": "Fiambre"
+    "food": "Click Here"
   },
   {
     "code": "GN",
     "name": "Guinea",
-    "food": "Poulet Yassa"
+    "food": "Click Here"
   },
   {
     "code": "GW",
     "name": "Guinea-Bissau",
-    "food": "Jollof rice"
+    "food": "Click Here"
   },
   {
     "code": "GY",
     "name": "Guyana",
-    "food": "Pepperpot"
+    "food": "Click Here"
   },
   {
     "code": "HT",
     "name": "Haiti",
-    "food": "Red beans and rice"
+    "food": "Click Here"
   },
   {
     "code": "HN",
     "name": "Honduras",
-    "food": "Carne asada"
+    "food": "Click Here"
   },
   {
     "code": "HU",
     "name": "Hungary",
-    "food": "chicken paprikash"
+    "food": "Click Here"
   },
   {
     "code": "IS",
     "name": "Iceland",
-    "food": "crossaint"
+    "food": "Click Here"
   },
   {
     "code": "IN",
     "name": "India",
-    "food": "Tandoori Chicken"
+    "food": "Click Here"
   },
   {
     "code": "ID",
     "name": "Indonesia",
-    "food": "Soto"
+    "food": "Click Here"
   },
   {
     "code": "IQ",
     "name": "Iraq",
-    "food": "Dolma"
+    "food": "Click Here"
   },
   {
     "code": "IE",
     "name": "Ireland",
-    "food": "Irish stew"
+    "food": "Click Here"
   },
   {
     "code": "IL",
     "name": "Israel",
-    "food": "Hummus"
+    "food": "Click Here"
   },
   {
     "code": "IT",
     "name": "Italy",
-    "food": "Risotto"
+    "food": "Click Here"
   },
   {
     "code": "JM",
     "name": "Jamaica",
-    "food": "Ackee and Saltfish"
+    "food": "Click Here"
   },
   {
     "code": "JP",
     "name": "Japan",
-    "food": "Sushi"
+    "food": "Click Here"
   },
   {
     "code": "JO",
     "name": "Jordan",
-    "food": "Mansaf"
+    "food": "Click Here"
   },
   {
     "code": "KZ",
     "name": "Kazakhstan",
-    "food": "Beshbarmak"
+    "food": "Click Here"
   },
   {
     "code": "KE",
     "name": "Kenya",
-    "food": "Ugali"
+    "food": "Click Here"
   },
   {
     "code": "KI",
     "name": "Kiribati",
-    "food": "Palusami"
+    "food": "Click Here"
   },
   {
     "code": "KR",
     "name": "Korea",
-    "food": "bibimbap"
+    "food": "Click Here"
   },
   {
     "code": "KW",
     "name": "Kuwait",
-    "food": "Machboos"
+    "food": "Click Here"
   },
   {
     "code": "KG",
     "name": "Kyrgyzstan",
-    "food": "Beshbarmak"
+    "food": "Click Here"
   },
   {
     "code": "LV",
     "name": "Latvia",
-    "food": "Latke"
+    "food": "Click Here"
   },
   {
     "code": "LB",
     "name": "Lebanon",
-    "food": "Kibbeh"
+    "food": "Click Here"
   },
   {
     "code": "LR",
     "name": "Liberia",
-    "food": "Dumboy"
+    "food": "Click Here"
   },
   {
     "code": "LT",
     "name": "Lithuania",
-    "food": "Cepelinai"
+    "food": "Click Here"
   },
   {
     "code": "LU",
     "name": "Luxembourg",
-    "food": "Judd mat Gaardebounen,"
+    "food": "Click Here"
   },
   {
     "code": "MK",
     "name": "Macedonia",
-    "food": "Balkan"
+    "food": "Click Here"
   },
   {
     "code": "MG",
     "name": "Madagascar",
-    "food": "Romazava"
+    "food": "Click Here"
   },
   {
     "code": "MW",
     "name": "Malawi",
-    "food": "Nshima"
+    "food": "Click Here"
   },
   {
     "code": "MY",
     "name": "Malaysia",
-    "food": "Nasi lemak"
+    "food": "Click Here"
   },
   {
     "code": "MV",
     "name": "Maldives",
-    "food": "Garudhiya"
+    "food": "Click Here"
   },
   {
     "code": "ML",
     "name": "Mali",
-    "food": "Maafe"
+    "food": "Click Here"
   },
   {
     "code": "MT",
     "name": "Malta",
-    "food": "Pastizzi"
+    "food": "Click Here"
   },
   {
     "code": "MH",
     "name": "Marshall Islands",
-    "food": "Macadamia nut pie"
+    "food": "Click Here"
   },
   {
     "code": "MR",
     "name": "Mauritania",
-    "food": "Thieboudienne"
+    "food": "Click Here"
   },
   {
     "code": "MU",
     "name": "Mauritius",
-    "food": "Octopus Curry"
+    "food": "Click Here"
   },
   {
     "code": "MX",
     "name": "Mexico",
-    "food": "Mole poblano"
+    "food": "Click Here"
   },
   {
     "code": "MD",
     "name": "Moldova",
-    "food": "Sarmale"
+    "food": "Click Here"
   },
   {
     "code": "MC",
     "name": "Monaco",
-    "food": "Barbaguian"
+    "food": "Click Here"
   },
   {
     "code": "MN",
     "name": "Mongolia",
-    "food": "Buuz"
+    "food": "Click Here"
   },
   {
     "code": "ME",
     "name": "Montenegro",
-    "food": "Punjene paprike"
+    "food": "Click Here"
   },
   {
     "code": "MS",
     "name": "Montserrat",
-    "food": "Goat water"
+    "food": "Click Here"
   },
   {
     "code": "MA",
     "name": "Morocco",
-    "food": "Couscous"
+    "food": "Click Here"
   },
   {
     "code": "MZ",
     "name": "Mozambique",
-    "food": "Frango"
+    "food": "Click Here"
   },
   {
     "code": "NA",
     "name": "Namibia",
-    "food": "Braais"
+    "food": "Click Here"
   },
   {
     "code": "NR",
     "name": "Nauru",
-    "food": "Coconut fish"
+    "food": "Click Here"
   },
   {
     "code": "NP",
     "name": "Nepal",
-    "food": "Dal bhat"
+    "food": "Click Here"
   },
   {
     "code": "NL",
     "name": "Netherlands",
-    "food": "Stamppot"
+    "food": "Click Here"
   },
   {
     "code": "NZ",
     "name": "New Zealand",
-    "food": "Pavlova"
+    "food": "Click Here"
   },
   {
     "code": "NI",
     "name": "Nicaragua",
-    "food": "Gallo pinto"
+    "food": "Click Here"
   },
   {
     "code": "NE",
     "name": "Niger",
-    "food": "Jollof rice"
+    "food": "Click Here"
   },
   {
     "code": "NG",
     "name": "Nigeria",
-    "food": "Fufu and Egusi soup"
+    "food": "Click Here"
   },
   {
     "code": "NO",
     "name": "Norway",
-    "food": "Lapskaus"
+    "food": "Click Here"
   },
   {
     "code": "OM",
     "name": "Oman",
-    "food": "Shuwa"
+    "food": "Click Here"
   },
   {
     "code": "PK",
     "name": "Pakistan",
-    "food": "Seekh Kabab"
+    "food": "Click Here"
   },
   {
     "code": "PW",
     "name": "Palau",
-    "food": "Bat soup"
+    "food": "Click Here"
   },
 
   {
     "code": "PA",
     "name": "Panama",
-    "food": "Sancocho de gallina"
+    "food": "Click Here"
   },
   {
     "code": "PG",
     "name": "Papua New Guinea",
-    "food": "Mumu"
+    "food": "Click Here"
   },
   {
     "code": "PY",
     "name": "Paraguay",
-    "food": "Sopa paraguaya"
+    "food": "Click Here"
   },
   {
     "code": "PE",
     "name": "Peru",
-    "food": "Ceviche"
+    "food": "Click Here"
   },
   {
     "code": "PH",
     "name": "Philippines",
-    "food": "Adobo"
+    "food": "Click Here"
   },
   {
     "code": "PL",
     "name": "Poland",
-    "food": "Bigos"
+    "food": "Click Here"
   },
   {
     "code": "PT",
     "name": "Portugal",
-    "food": "Bacalhau"
+    "food": "Click Here"
   },
   {
     "code": "PR",
     "name": "Puerto Rico",
-    "food": "Mofongo"
+    "food": "Click Here"
   },
   {
     "code": "QA",
     "name": "Qatar",
-    "food": "Machboos"
+    "food": "Click Here"
   },
   {
     "code": "RO",
     "name": "Romania",
-    "food": "Sarmale"
+    "food": "Click Here"
   },
   {
     "code": "RU",
     "name": "Russia",
-    "food": "Beef Stroganoff",
+    "food": "Click Here"
   },
   {
     "code": "RW",
     "name": "Rwanda",
-    "food": "Ugali"
+    "food": "Click Here"
   },
   {
     "code": "LC",
     "name": "Saint Lucia",
-    "food": "Green fig and saltfish"
+    "food": "Click Here"
   },
   {
     "code": "WS",
     "name": "Samoa",
-    "food": "Palusami"
+    "food": "Click Here"
   },
   {
     "code": "SM",
     "name": "San Marino",
-    "food": "Torta Tre Monti"
+    "food": "Click Here"
   },
 
   {
     "code": "SA",
     "name": "Saudi Arabia",
-    "food": "Kabsa"
+    "food": "Click Here"
   },
   {
     "code": "SN",
     "name": "Senegal",
-    "food": "Thieboudienne"
+    "food": "Click Here"
   },
   {
     "code": "RS",
     "name": "Serbia",
-    "food": "Ajvar"
+    "food": "Click Here"
   },
   {
     "code": "SC",
     "name": "Seychelles",
-    "food": "Fruit Bat Soup"
+    "food": "Click Here"
   },
   {
     "code": "SL",
     "name": "Sierra Leone",
-    "food": "Cassava leaves"
+    "food": "Click Here"
   },
   {
     "code": "SG",
     "name": "Singapore",
-    "food": "Chilli crab"
+    "food": "Click Here"
   },
   {
     "code": "SK",
     "name": "Slovakia",
-    "food": "Bryndzove halushky"
+    "food": "Click Here"
   },
   {
     "code": "SI",
     "name": "Slovenia",
-    "food": "Belokranjska povitica"
+    "food": "Click Here"
   },
   {
     "code": "SB",
     "name": "Solomon Islands",
-    "food": "Poi"
+    "food": "Click Here"
   },
   {
     "code": "SO",
     "name": "Somalia",
-    "food": "Canjeero with goat stew"
+    "food": "Click Here"
   },
   {
     "code": "ZA",
     "name": "South Africa",
-    "food": "Bobotie"
+    "food": "Click Here"
   },
   {
     "code": "KR",
     "name": "South Korea",
-    "food": "Bibimbap"
+    "food": "Click Here"
   },
   {
     "code": "ES",
     "name": "Spain",
-    "food": "Tortilla espanola"
+    "food": "Click Here"
   },
   {
     "code": "LK",
     "name": "Sri Lanka",
-    "food": "Rice and curry"
+    "food": "Click Here"
   },
   {
     "code": "SD",
     "name": "Sudan",
-    "food": "Ful medames"
+    "food": "Click Here"
   },
   {
     "code": "SR",
     "name": "Suriname",
-    "food": "Pom"
+    "food": "Click Here"
   },
   {
     "code": "SE",
     "name": "Sweden",
-    "food": "Ostkaka"
+    "food": "Click Here"
   },
   {
     "code": "CH",
     "name": "Switzerland",
-    "food": "Fondue"
+    "food": "Click Here"
   },
   {
     "code": "TW",
     "name": "Taiwan",
-    "food": "Beef noodle soup"
+    "food": "Click Here"
   },
   {
     "code": "TJ",
     "name": "Tajikistan",
-    "food": "O'sh"
+    "food": "Click Here"
   },
   {
     "code": "TZ",
     "name": "Tanzania",
-    "food": "Ugali"
+    "food": "Click Here"
   },
   {
     "code": "TH",
     "name": "Thailand",
-    "food": "Pad Thai"
+    "food": "Click Here"
   },
   {
     "code": "TG",
     "name": "Togo",
-    "food": "Yeyebessissi"
+    "food": "Click Here"
   },
   {
     "code": "TN",
     "name": "Tunisia",
-    "food": "Couscous"
+    "food": "Click Here"
   },
   {
     "code": "TR",
     "name": "Turkey",
-    "food": "Kuru fasulye with pilav"
+    "food": "Click Here"
   },
   {
     "code": "TM",
     "name": "Turkmenistan",
-    "food": "Palaw"
+    "food": "Click Here"
   },
   {
     "code": "TV",
     "name": "Tuvalu",
-    "food": "Pulaka"
+    "food": "Click Here"
   },
   {
     "code": "UG",
     "name": "Uganda",
-    "food": "Matoke"
+    "food": "Click Here"
   },
   {
     "code": "UA",
     "name": "Ukraine",
-    "food": "Borscht"
+    "food": "Click Here"
   },
   {
     "code": "AE",
     "name": "United Arab Emirates",
-    "food": "Biryani"
+    "food": "Click Here"
   },
   {
     "code": "GB",
     "name": "United Kingdom",
-    "food": "Chicken tikka masala"
+    "food": "Click Here"
   },
   {
     "code": "US",
     "name": "United States",
-    "food": "Apple pie"
+    "food": "Click Here"
   },
 
   {
     "code": "UY",
     "name": "Uruguay",
-    "food": "Asado"
+    "food": "Click Here"
   },
   {
     "code": "UZ",
     "name": "Uzbekistan",
-    "food": "pork stew"
+    "food": "Click Here"
   },
   {
     "code": "VU",
     "name": "Vanuatu",
-    "food": "Lap lap"
+    "food": "Click Here"
   },
   {
     "code": "VE",
     "name": "Venezuela",
-    "food": "PABELLON CRIOLLO"
+    "food": "Click Here"
   },
   {
     "code": "VN",
     "name": "Viet Nam",
-    "food": "Pho"
+    "food": "Click Here"
   },
   {
     "code": "YE",
     "name": "Yemen",
-    "food": "Kabsa"
+    "food": "Click Here"
   },
   {
     "code": "ZM",
     "name": "Zambia",
-    "food": "Nshima"
+    "food": "Click Here"
   },
   {
     "code": "ZW",
     "name": "Zimbabwe",
-    "food": "Sadza"
+    "food": "Click Here"
   }
 ];

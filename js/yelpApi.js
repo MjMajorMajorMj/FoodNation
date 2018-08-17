@@ -1,4 +1,4 @@
-const BASE_URL = "../server/backend/yelp_server.php";
+const BASE_URL = "./server/backend/yelp_server.php";
 
 class Yelp {
   static getLocalBusinesses({ lat: latitude, lng: longitude }, term = "food") {
