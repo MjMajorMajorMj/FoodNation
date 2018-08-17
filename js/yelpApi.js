@@ -35,6 +35,12 @@ function YelpMap(response = { lat: 33.633985, lng: -117.733393 }, businesses = [
       title: businesses[i].name
     });
     bounds.extend(marker.position);
+    marker.addListener('click', function() {
+      $(".yelpResultTitle").css("color","black");
+      const clickedMarkerName = this.title;
+      highlightYelpResult(clickedMarkerName);
+    });
+
   }
   map.fitBounds(bounds);
   let listener = google.maps.event.addListener(map, "idle", function () {
@@ -42,7 +48,14 @@ function YelpMap(response = { lat: 33.633985, lng: -117.733393 }, businesses = [
   });
 }
 
-
+function highlightYelpResult(name) {
+  $(".yelpResultTitle").each(function() {
+    let yelpResult = $(this).text();
+    if (yelpResult === name) {
+      $(this).css("color", "#fd297b");
+    }
+  })
+}
 
 
 

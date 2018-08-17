@@ -128,6 +128,7 @@ function renderYelpResults(businesses) {
 
     const $reviewTitle = $("<h1>", {
       text: name,
+      class: "yelpResultTitle",
       style: "overflow-wrap: break-word"
     });
 
@@ -201,12 +202,19 @@ function sendLocationToYelp() {
     $('.mapContainer').show();
   }
   let location = $("input.inputField")[0].value;
+  if (location === "") {
+    return;
+  }
   //Remove click handlers for Yelp search
   $(".search-icon").off();
   $("input.inputField").off();
-
   $('.yelp-list').empty();
   Geolocation.cityLocation(location).done(({ results: [first] }) => {
+    if (typeof(first) === "undefined") {
+      $(".search-icon").on("click", sendLocationToYelp);
+      $("input.inputField").on("keydown", handleInputBarEnterKey);
+      return;
+    }
     const { location } = first.geometry;
     Yelp.getLocalBusinesses(location, food).done((businesses) => {
       businesses = JSON.parse(businesses);
