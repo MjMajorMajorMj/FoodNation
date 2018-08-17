@@ -12,9 +12,6 @@ class Yelp {
         sort_by: 'distance',
         limit: 3
       },
-      success: function() {
-        window.scrollTo(0,document.body.scrollHeight);
-      }
     };
 
     return $.ajax(config);
@@ -38,8 +35,8 @@ function YelpMap(response = { lat: 33.633985, lng: -117.733393 }, businesses = [
       title: businesses[i].name
     });
     bounds.extend(marker.position);
-    marker.addListener('click', function() {
-      $(".yelpResultTitle").css("color","black");
+    marker.addListener('click', function () {
+      $(".yelpResultTitle").css("color", "black");
       const clickedMarkerName = this.title;
       highlightYelpResult(clickedMarkerName);
     });
@@ -52,7 +49,7 @@ function YelpMap(response = { lat: 33.633985, lng: -117.733393 }, businesses = [
 }
 
 function highlightYelpResult(name) {
-  $(".yelpResultTitle").each(function() {
+  $(".yelpResultTitle").each(function () {
     let yelpResult = $(this).text();
     if (yelpResult === name) {
       $(this).css("color", "#fd297b");
