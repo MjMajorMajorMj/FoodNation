@@ -40,6 +40,10 @@ h1.brand span {
   margin-right: -0.5rem;
 }
 
+#mobileBrand {
+  display:none;
+}
+
 header {
   width: 100%;
   height: 2rem;
@@ -62,10 +66,6 @@ header .country h2.name {
   text-transform: uppercase;
   margin: auto 1rem;
 }
-
-/*section.food-section {
-  min-height: calc(100vh - 2rem);
-} */
 
 section.food-section h1 {
   text-transform: uppercase;
@@ -183,6 +183,8 @@ section.how-to .youtubeVideos {
   color: black;
   width: 100%;
   font-weight: 2rem;
+  text-align:center;
+  overflow-wrap:break-word;
 }
 
 .hide {
@@ -299,6 +301,9 @@ section.yelp .search-container .autoCompleteBackground {
   h1.brand{
     font-size:2rem;
   }
+  header .country h2.name{
+    display:none;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -306,7 +311,7 @@ section.yelp .search-container .autoCompleteBackground {
     padding: 1rem 0;
   }
   h1.brand{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   header .country h2.name{
@@ -338,10 +343,6 @@ section.yelp .search-container .autoCompleteBackground {
     text-align:center;
   }
 
-  .videoImageTitle{
-    display:none;
-  }
-
   .videoDiv {
     width: 100%;
   }
@@ -354,5 +355,12 @@ section.yelp .search-container .autoCompleteBackground {
 
   .yelp-review-card {
     width:100%;
+  }
+
+  #desktopBrand {
+    display:none;
+  }
+  #mobileBrand {
+    display:block;
   }
 }
