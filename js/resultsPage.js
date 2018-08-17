@@ -1,7 +1,7 @@
 $(document).ready(initializeApp);
 let food;
 function initializeApp() {
-    $('.mapContainer, .noResults').hide();
+    $('.mapContainer, .noResults, .loading').hide();
     //grab url params here
     const { search } = window.location; // gets current url
     const [, countryCode] = search.split("="); // splits url into array and gets the second index.
@@ -200,6 +200,9 @@ function makeheader(inputString) {
 }
 
 function sendLocationToYelp() {
+    $('.noResults').hide();
+    $('.loading').show();
+    window.scrollTo(0, document.body.scrollHeight);
     let location = $("input.inputField")[0].value;
     if (location === "") {
         displayNoResults();
@@ -220,6 +223,8 @@ function sendLocationToYelp() {
         Yelp.getLocalBusinesses(location, food).done((businesses) => {
             businesses = JSON.parse(businesses);
             if (businesses.businesses.length === 0) {
+                $(".search-icon").on("click", sendLocationToYelp);
+                $("input.inputField").on("keydown", handleInputBarEnterKey);
                 displayNoResults();
                 return;
             } else {
@@ -229,6 +234,7 @@ function sendLocationToYelp() {
                     $('.mapContainer').show();
                 }
             }
+            $('.loading').hide();
             YelpMap(location, businesses.businesses);
             renderYelpResults(businesses);
             window.scrollTo(0, document.body.scrollHeight);
@@ -252,7 +258,8 @@ function hideBlinkScrollBar() {
 }
 
 function displayNoResults() {
-    $('.mapContainer').hide();
+    $('.yelp-list').empty();
+    $('.mapContainer, .loading').hide();
     $('.noResults').show();
     window.scrollTo(0, document.body.scrollHeight);
 }
