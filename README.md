@@ -22,4 +22,4 @@ Birthed from a Hackathon, Food Nation is a web application that allows the user 
 ## Contributions
 Currently we are not open to outside contributions.
 
-   [the live demo]: <http://http://paulglujan.com/food-nation/>
+   [the live demo]: <http://foodnation.aaroncpark.com/>
