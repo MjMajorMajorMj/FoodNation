@@ -321,7 +321,7 @@ section.yelp .search-container .autoCompleteBackground {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 600px) {
   header{
     padding: 1rem 0;
   }
@@ -369,7 +369,7 @@ section.yelp .search-container .autoCompleteBackground {
   }
 
   .yelp-review-card {
-    width:100%;
+    width:100%!important;
   }
 
   #desktopBrand {
@@ -377,5 +377,17 @@ section.yelp .search-container .autoCompleteBackground {
   }
   #mobileBrand {
     display:block;
+  }
+
+  .food-section h1 {
+    overflow-wrap: break-word;
+  }
+
+  .grabABite {
+    overflow-wrap: break-word;
+  }
+
+  .makeItYourself {
+    overflow-wrap: break-word;
   }
 }
