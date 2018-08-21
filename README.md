@@ -15,6 +15,7 @@ Birthed from a Hackathon, Food Nation is a web application that allows the user 
 
 ## Personal Insight
 > Food Nation is a proud achievement as we, the development team, while only having just a few weeks of web development experience, only had two days to create a web application from the ground up. The project was a transition from developing games to practical, useful web applications. 
+
 > Another key point is that Food Nation is our first project to heavily utilize APIs. The goal of this Hackathon was to educate the usage of APIs and how they interact with the front-end. This knowledge was important, especially for those going into back-end development who would have to create their own APIs for future projects.
 
 
